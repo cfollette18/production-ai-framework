@@ -26,7 +26,7 @@ An index can be rebuilt from fixed inputs. Model-assisted extraction and evaluat
 
 ## Suggested agent interface
 
-Expose `search(query)`, `get_record(id)`, `get_document(path)`, and `get_related(id, relation)` through a CLI or a later service adapter. Return structured provenance with every response. The current CLI implements validation, index building, and search only.
+Expose `search(query)`, `get_record(id)`, `get_document(path)`, and `get_related(id, relation)` through a CLI or a later service adapter. Return structured provenance with every response. The CLI implements validation, deterministic bundle export/checking, exact record lookup (`get`), catalog relationship lookup (`related`), index building, and search. See docs/agent-integration.md for the public contract.
 
 ## Extension acceptance checks
 

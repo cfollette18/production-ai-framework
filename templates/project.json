@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "project_id": null,
+  "business_owner": null,
+  "technical_owner": null,
+  "on_call_route": null,
+  "allowed_actions": [],
+  "forbidden_actions": [],
+  "business_metric": {
+    "name": null,
+    "numerator": null,
+    "denominator": null,
+    "window": null,
+    "exclusions": [],
+    "source": null
+  },
+  "release_thresholds": {
+    "quality": null,
+    "latency_p95_ms": null,
+    "cost_per_success": null,
+    "safety": null
+  },
+  "source_owners": {},
+  "release_manifest": {
+    "code_revision": null,
+    "prompt_hash": null,
+    "model_identifier": null,
+    "tools_version": null,
+    "data_snapshot": null,
+    "retrieval_index": null,
+    "eval_dataset_version": null
+  },
+  "rollback_target": null
+}

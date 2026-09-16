@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "id": "ObTPqBGsEbA",
+  "url": "https://ai.engineer/talks/ObTPqBGsEbA-the-production-ai-playbook-deploying-agents-at-enterprise-scale",
+  "video_url": "https://www.youtube.com/watch?v=ObTPqBGsEbA",
+  "title": "The Production AI Playbook: Deploying Agents at Enterprise Scale",
+  "speaker": "Sandipan Bhaumik",
+  "retrieved_on": "2026-09-15",
+  "page_sha256": "a7dd375ae0960cb158188d15cf7ba7cbd0c4e0cf89d9e43981b300bb7d664638",
+  "upstream_transcript": {
+    "id": "kgv2:transcript:dd3e45e138d76859ffe0c2a4",
+    "sourceChecksum": "56d77bd6b9cac066164f1806b83af590c10377bf0b162ca38222e108d4db27a5",
+    "logicalObjectPath": "objects/sha256/56/56d77bd6b9cac066164f1806b83af590c10377bf0b162ca38222e108d4db27a5.json",
+    "url": "https://assets.ai.engineer/sites/aiecode2025/knowledge-corpus/objects/sha256/56/56d77bd6b9cac066164f1806b83af590c10377bf0b162ca38222e108d4db27a5.json",
+    "sha256": "56d77bd6b9cac066164f1806b83af590c10377bf0b162ca38222e108d4db27a5",
+    "bytes": 72482,
+    "segmentCount": 178
+  },
+  "transcript_review_status": "needs_review",
+  "rights": {
+    "upstreamStatus": "unverified",
+    "license": "NOASSERTION",
+    "publicDistribution": true,
+    "authorizationBasis": "owner-asserted-user-approved"
+  },
+  "note": "Upstream authorization metadata is descriptive; it does not grant this repository a transcript redistribution license."
+}

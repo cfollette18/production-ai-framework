@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "trace_id": null,
+  "workflow_id": null,
+  "actor_reference": null,
+  "release_manifest_id": null,
+  "started_at": null,
+  "spans": [
+    {
+      "span_id": null,
+      "parent_span_id": null,
+      "operation": null,
+      "status": null,
+      "duration_ms": null,
+      "authorization_result": null,
+      "safe_input_reference": null,
+      "safe_output_reference": null,
+      "document_versions": [],
+      "retry_count": null,
+      "idempotency_key": null
+    }
+  ],
+  "outcome": null,
+  "handoff_reference": null,
+  "retention_class": null
+}

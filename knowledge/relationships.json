@@ -1,0 +1,23 @@
+[
+  {
+    "from": "pillar-1",
+    "relation": "uses",
+    "to": "pillar-2",
+    "origin": "assistant_implementation",
+    "rationale": "Behavior checks need observable execution evidence."
+  },
+  {
+    "from": "pillar-2",
+    "relation": "depends_on",
+    "to": "pillar-3",
+    "origin": "assistant_implementation",
+    "rationale": "Operational evidence needs a managed data lifecycle."
+  },
+  {
+    "from": "pillar-4",
+    "relation": "constrained_by",
+    "to": "pillar-5",
+    "origin": "assistant_implementation",
+    "rationale": "Workflow actions must respect authorization and ownership."
+  }
+]

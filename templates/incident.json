@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "incident_id": null,
+  "owner": null,
+  "severity": null,
+  "detected_at": null,
+  "affected_workflows": [],
+  "impact_estimate": null,
+  "evidence_references": [],
+  "release_manifest_id": null,
+  "containment": null,
+  "root_cause": null,
+  "fix_change_id": null,
+  "regression_cases": [],
+  "recovery_evidence": null,
+  "follow_ups": [],
+  "closed_at": null
+}

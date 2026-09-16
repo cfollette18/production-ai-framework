@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "case_id": null,
+  "owner": null,
+  "category": null,
+  "dataset_partition": null,
+  "source_provenance": null,
+  "input": null,
+  "context": [],
+  "required_behavior": [],
+  "forbidden_behavior": [],
+  "allowed_tools": [],
+  "expected_escalation": null,
+  "deterministic_checks": [],
+  "semantic_rubric": [],
+  "behavioral_constraints": {
+    "max_tool_calls": null,
+    "max_retries": null,
+    "required_authorizations": []
+  },
+  "effective_date": null,
+  "last_reviewed": null
+}

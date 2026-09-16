@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pillar-1",
+    "title": "Evaluation",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/operating-framework.md",
+    "source_id": "ObTPqBGsEbA"
+  },
+  {
+    "id": "pillar-2",
+    "title": "Observability",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/operating-framework.md",
+    "source_id": "ObTPqBGsEbA"
+  },
+  {
+    "id": "pillar-3",
+    "title": "Data lifecycle",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/operating-framework.md",
+    "source_id": "ObTPqBGsEbA"
+  },
+  {
+    "id": "pillar-4",
+    "title": "Workflow coordination",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/operating-framework.md",
+    "source_id": "ObTPqBGsEbA"
+  },
+  {
+    "id": "pillar-5",
+    "title": "Governance",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/operating-framework.md",
+    "source_id": "ObTPqBGsEbA"
+  }
+]

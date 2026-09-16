@@ -6,7 +6,11 @@ Agent-independent enterprise AI planning and operations knowledge.
 - [Complete text context](dist/agent-context.md): attach or load directly.
 - [Structured bundle](dist/knowledge.json): stable IDs, text, origin, and hashes.
 - [Five pillars](docs/pillars.md): evaluation, observability, data foundations, orchestration, governance.
+- [Multi-agent orchestration patterns](docs/multi-agent-orchestration.md): coordination choice, versioned state, handoff contracts, circuit breakers, compensation.
+- [Lexical retrieval with BM25](docs/lexical-retrieval-bm25.md): agentic search, BM25 scoring, k1 and b parameters, retrieval evaluation.
 - [Agent integration](docs/agent-integration.md): generic context and retrieval interfaces.
-- [Source notes](docs/source-notes.md): attribution and limitations.
+- [Source notes](docs/source-notes.md): attribution and limitations for the playbook talk.
+- [Orchestration talk source notes](docs/source-notes-choreography.md): attribution and limitations for the multi-agent patterns talk.
+- [BM25 talk source notes](docs/source-notes-bm25.md): attribution and limitations for the agentic search talk.
 - [Source ingestion instructions](ingestion/README.md): add a new transcript or document with any model.
 - [Single-file ingestion kit](dist/source-ingestion-kit.md): upload alongside a source; includes rules, schema, and example.

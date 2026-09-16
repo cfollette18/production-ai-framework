@@ -67,6 +67,20 @@ class BundleTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             knowledge.bundle()
 
+    def test_unknown_source_fails(self):
+        path = self.root / 'knowledge/records.json'
+        rows = json.loads(path.read_text())
+        rows[0]['source_id'] = 'no-such-source'
+        path.write_text(json.dumps(rows))
+        with self.assertRaises(ValueError):
+            knowledge.validate()
+
+    def test_additional_source_manifest_is_accepted(self):
+        records = knowledge.validate()
+        sources = {row['source_id'] for row in records}
+        self.assertIn('2czYyrTzILg', sources)
+        self.assertIn('fZH97QHHYjY', sources)
+
 
 if __name__ == '__main__':
     unittest.main()

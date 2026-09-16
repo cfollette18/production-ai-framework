@@ -2,7 +2,7 @@
 
 An agent-independent framework for planning, reviewing, and operating enterprise AI systems. Any agent that can read text or JSON can use it. No Hermes installation, model provider, vector database, or agent SDK is required.
 
-The framework turns a proposed AI workflow into explicit requirements, evaluation evidence, operational controls, and accountable release decisions. Its procedures are implementation recommendations inspired by Sandipan Bhaumik's talk, not a verbatim transcript or vendor deployment manual. See [source notes](docs/source-notes.md).
+The framework turns a proposed AI workflow into explicit requirements, evaluation evidence, operational controls, and accountable release decisions. Its procedures are implementation recommendations inspired by Sandipan Bhaumik's talks at AI Engineer Europe 2026 — a production playbook and a multi-agent orchestration patterns talk — and Jo Kristian Bergum's BM25-for-agentic-search talk at AI Engineer World's Fair 2026, not a verbatim transcript or vendor deployment manual. See the [source notes](docs/source-notes.md) for the playbook talk, the [orchestration talk notes](docs/source-notes-choreography.md), and the [BM25 talk notes](docs/source-notes-bm25.md).
 
 ## The five pillars
 
@@ -10,11 +10,11 @@ The framework turns a proposed AI workflow into explicit requirements, evaluatio
 |---|---|---|
 | **Evaluation** | How will we know the system works for this business? | Representative cases, rubrics, behavior checks, release criteria |
 | **Observability** | Can we explain what happened during a request? | Correlated traces, outcome metrics, alerts, diagnostic evidence |
-| **Data foundations** | Is the information current, authorized, usable, and traceable? | Source inventory, versioned snapshots, freshness checks, trace-data policy |
+| **Data foundations** | Is the information current, authorized, usable, and traceable? | Source inventory, versioned snapshots, freshness checks, trace-data policy, retrieval configuration |
 | **Orchestration** | How do steps, agents, and people coordinate and recover? | Workflow state, dependencies, retry limits, human handoffs |
 | **Governance** | Who owns decisions, permissions, changes, and failures? | Owners, authorization boundaries, change records, rollback plans |
 
-The pillars work together: evaluation detects a problem; traces locate it; data or workflow controls address its cause; governance determines who can change the system and how recovery is verified. [Read the pillar guide](docs/pillars.md) and [detailed operating procedures](docs/operating-framework.md).
+The pillars work together: evaluation detects a problem; traces locate it; data or workflow controls address its cause; governance determines who can change the system and how recovery is verified. [Read the pillar guide](docs/pillars.md) and [detailed operating procedures](docs/operating-framework.md). For coordination, state handoff, and failure-recovery patterns between agents, see [multi-agent orchestration patterns](docs/multi-agent-orchestration.md).
 
 ## Give this to any agent
 

@@ -16,6 +16,18 @@
       "origin": "source_synopsis"
     },
     {
+      "id": "source-notes-choreography",
+      "path": "docs/source-notes-choreography.md",
+      "heading": null,
+      "origin": "source_synopsis"
+    },
+    {
+      "id": "source-notes-bm25",
+      "path": "docs/source-notes-bm25.md",
+      "heading": null,
+      "origin": "source_synopsis"
+    },
+    {
       "id": "pillars",
       "path": "docs/pillars.md",
       "heading": null,
@@ -49,6 +61,96 @@
       "id": "orchestration",
       "path": "docs/operating-framework.md",
       "heading": "## 5. Workflow coordination",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "orchestration-motivation",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 1. Why added agents become a distributed system",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "coordination-patterns",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 2. Choosing choreography or orchestration",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "state-versioning",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 3. Immutable state snapshots and versioned handoffs",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "handoff-contracts",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 4. Data contracts at handoff boundaries",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "circuit-breakers",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 5. Circuit breakers around agent calls",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "saga-compensation",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 6. Saga compensation for partial failure",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "reference-architecture",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 7. Reference architecture and vendor mapping",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "pattern-pillar-mapping",
+      "path": "docs/multi-agent-orchestration.md",
+      "heading": "## 8. Mapping the patterns to the five pillars",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "agentic-search",
+      "path": "docs/lexical-retrieval-bm25.md",
+      "heading": "## 1. Agentic search: retrieval inside the agent loop",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "bm25-scoring",
+      "path": "docs/lexical-retrieval-bm25.md",
+      "heading": "## 2. What BM25 is",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "bm25-parameters",
+      "path": "docs/lexical-retrieval-bm25.md",
+      "heading": "## 3. The k1 and b parameters",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "bm25-agentic-fit",
+      "path": "docs/lexical-retrieval-bm25.md",
+      "heading": "## 4. Why BM25 fits agentic search",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "retrieval-evaluation",
+      "path": "docs/lexical-retrieval-bm25.md",
+      "heading": "## 5. Evaluation shifts from ranked lists to task success",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "bm25-workspace",
+      "path": "docs/lexical-retrieval-bm25.md",
+      "heading": "## 6. Retrieval results as a filesystem workspace",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "retrieval-pillar-mapping",
+      "path": "docs/lexical-retrieval-bm25.md",
+      "heading": "## 7. Mapping to the five pillars",
       "origin": "implementation_guidance"
     },
     {
@@ -112,6 +214,18 @@
       "origin": "implementation_template"
     },
     {
+      "id": "template-handoff-contract",
+      "path": "templates/handoff-contract.json",
+      "heading": null,
+      "origin": "implementation_template"
+    },
+    {
+      "id": "template-circuit-breaker",
+      "path": "templates/circuit-breaker-policy.json",
+      "heading": null,
+      "origin": "implementation_template"
+    },
+    {
       "id": "source-manifest",
       "path": "sources/manifest.json",
       "heading": null,
@@ -120,6 +234,36 @@
     {
       "id": "source-coverage",
       "path": "sources/coverage.json",
+      "heading": null,
+      "origin": "source_metadata"
+    },
+    {
+      "id": "source-manifest-choreography",
+      "path": "sources/2czYyrTzILg/manifest.json",
+      "heading": null,
+      "origin": "source_metadata"
+    },
+    {
+      "id": "source-coverage-choreography",
+      "path": "sources/2czYyrTzILg/coverage.json",
+      "heading": null,
+      "origin": "source_metadata"
+    },
+    {
+      "id": "source-manifest-bm25",
+      "path": "sources/fZH97QHHYjY/manifest.json",
+      "heading": null,
+      "origin": "source_metadata"
+    },
+    {
+      "id": "source-coverage-bm25",
+      "path": "sources/fZH97QHHYjY/coverage.json",
+      "heading": null,
+      "origin": "source_metadata"
+    },
+    {
+      "id": "source-validation-choreography",
+      "path": "sources/2czYyrTzILg/validation.md",
       "heading": null,
       "origin": "source_metadata"
     },

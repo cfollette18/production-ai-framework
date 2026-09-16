@@ -24,7 +24,7 @@ Answer-serving information and operational trace data serve different purposes a
 
 Maintain authoritative sources, owners, effective dates, access restrictions, freshness objectives, transformations, and index versions. Publish consistent retrieval snapshots, test updates and deletions, and retain rollback paths. Govern trace storage separately when sensitivity or retention differs.
 
-Inputs: source inventory, changes, and access rules. Outputs: qualified snapshots, retrieval evidence, freshness monitoring, and managed trace storage. Acceptance evidence: an updated policy is retrieved with the correct version, while superseded and restricted content is handled correctly. See section 4.
+Inputs: source inventory, changes, and access rules. Outputs: qualified snapshots, retrieval evidence, freshness monitoring, and managed trace storage. Acceptance evidence: an updated policy is retrieved with the correct version, while superseded and restricted content is handled correctly. See section 4 and [lexical-retrieval-bm25.md](lexical-retrieval-bm25.md) for lexical retrieval configuration and agentic search guidance.
 
 ## Orchestration — coordinate work and recover
 
@@ -32,7 +32,7 @@ Orchestration specifies work order, dependencies, and human involvement. Multipl
 
 Choose explicit coordination for ordered work or independent event-driven workers where appropriate. Define states, deadlines, retries, cancellation, duplicate delivery, and recovery. Human review needs an owner, queue, and timeout outcome. Approval must refer to the actual proposed action.
 
-Inputs: steps, dependencies, side effects, and human responsibilities. Outputs: state model, coordination decisions, recovery policies. Acceptance evidence: restart, timeout, duplicate delivery, and unavailable-reviewer scenarios have known outcomes. See section 5.
+Inputs: steps, dependencies, side effects, and human responsibilities. Outputs: state model, coordination decisions, recovery policies. Acceptance evidence: restart, timeout, duplicate delivery, and unavailable-reviewer scenarios have known outcomes. See section 5, [multi-agent-orchestration.md](multi-agent-orchestration.md) for coordination, versioned-state, contract, circuit-breaker, and compensation patterns, and templates/handoff-contract.json.
 
 ## Governance — assign accountability and control changes
 

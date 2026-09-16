@@ -73,6 +73,10 @@ def export(check=False):
 
 def validate():
     bundle()
+    source_ids = {
+        read(str(path.relative_to(ROOT)))['id']
+        for path in sorted((ROOT / 'sources').rglob('manifest.json'))
+    }
     records = read('knowledge/records.json')
     ids = set()
     for row in records:
@@ -85,7 +89,7 @@ def validate():
         document = (ROOT / row['document']).resolve()
         if not document.is_relative_to(ROOT) or not document.is_file():
             raise ValueError('Invalid document: ' + row['document'])
-        if row['source_id'] != read('sources/manifest.json')['id']:
+        if row['source_id'] not in source_ids:
             raise ValueError('Unknown source')
     for edge in read('knowledge/relationships.json'):
         if edge.get('from') not in ids or edge.get('to') not in ids:

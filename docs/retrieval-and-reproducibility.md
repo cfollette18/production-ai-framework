@@ -8,7 +8,7 @@ The included SQLite index supports lexical search. Its manifest records hashes o
 
 ## Optional semantic retrieval
 
-Add an embedding index only after evaluating lexical retrieval on realistic questions. Record model identifier, dimensions, normalization, chunking algorithm, input hashes, and dependency lockfile. Chunk by coherent sections while retaining document path and heading. Rebuild when model or chunking changes.
+Add an embedding index only after evaluating lexical retrieval on realistic questions. Lexical baselines are sensitive to configuration: BM25's k1 parameter controls how quickly the score grows with repeated term occurrences in a document, and its b parameter controls document-length normalization so long documents do not dominate merely by having more words — an unexamined default can make lexical retrieval look weaker than it is. See [lexical-retrieval-bm25.md](lexical-retrieval-bm25.md). Record model identifier, dimensions, normalization, chunking algorithm, input hashes, and dependency lockfile. Chunk by coherent sections while retaining document path and heading. Rebuild when model or chunking changes.
 
 For hybrid retrieval, retrieve lexical and semantic candidates, combine rankings, deduplicate, optionally rerank, then expand to surrounding sections. Apply permissions before returning candidates and again before opening source evidence. Benchmark citation accuracy and missing-evidence behavior as well as relevance.
 

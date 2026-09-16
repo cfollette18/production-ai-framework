@@ -27,3 +27,9 @@ The talk organizes production work into evaluation, observability, data foundati
 The page embeds 178 transcript segments, with start timestamps but no end timestamps. Its machine-readable transcript status is `needs_review`. All available segment text was reviewed, including the platform section. Audio alignment, slide-only details, and QR-linked resources remain unverified. Transcript availability is not the same as complete audiovisual coverage.
 
 The website also includes an editorial article. Its added examples and resource recommendations must not automatically be attributed to the speaker. The operational documents in this repository are an original implementation proposal organized around the talk's themes, not a substitute transcript or a recreation of the speaker's downloads.
+
+## Additional source
+
+A second talk by the same speaker covers multi-agent orchestration patterns — choreography versus orchestration, immutable versioned state, handoff contracts, circuit breakers, and Saga compensation. See [source-notes-choreography.md](source-notes-choreography.md) for its attribution and review limitations and [multi-agent-orchestration.md](multi-agent-orchestration.md) for the distilled guidance.
+
+A third source — Jo Kristian Bergum's AI Engineer World's Fair 2026 talk on BM25 for agentic search — covers lexical retrieval, the BM25 k1 and b parameters, and retrieval evaluation for agent users. See [source-notes-bm25.md](source-notes-bm25.md) and [lexical-retrieval-bm25.md](lexical-retrieval-bm25.md).

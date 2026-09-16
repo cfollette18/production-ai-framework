@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "id": "fZH97QHHYjY",
+  "url": "https://www.youtube.com/watch?v=fZH97QHHYjY",
+  "video_url": "https://www.youtube.com/watch?v=fZH97QHHYjY",
+  "title": "The unreasonable effectiveness of BM25 for agentic search",
+  "speaker": "Jo Kristian Bergum",
+  "speaker_affiliation": "Hornet.dev",
+  "event": "AI Engineer World's Fair 2026",
+  "retrieved_on": "2026-09-16",
+  "upstream_transcript": {
+    "type": "youtube_auto_generated_captions",
+    "language": "en",
+    "kind": "asr",
+    "segmentCount": 406,
+    "retrieval_method": "youtube-transcript-api"
+  },
+  "transcript_review_status": "needs_review",
+  "rights": {
+    "upstreamStatus": "unverified",
+    "license": "NOASSERTION",
+    "publicDistribution": true,
+    "authorizationBasis": "owner-asserted-user-approved"
+  },
+  "note": "Unlike the ai.engineer-hosted talks, no curated transcript page was found for this video at retrieval time. The transcript comes from YouTube's auto-generated captions and contains automatic-speech-recognition errors (for example 'Joe Bergam' for Jo Kristian Bergum, 'GP' for grep, 'NDG' for nDCG, one 'BM35' for BM25). Slide content, charts, and demonstrations are not captured by captions. Auto-generated captions are not redistributed in this repository."
+}

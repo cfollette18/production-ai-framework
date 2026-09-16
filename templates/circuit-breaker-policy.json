@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "policy_id": null,
+  "protected_dependency": null,
+  "failure_threshold": null,
+  "cooldown_seconds": null,
+  "half_open_probe_count": null,
+  "threshold_rationale": null,
+  "threshold_decided_by": null,
+  "open_circuit_behavior": null,
+  "degradation_strategy": null,
+  "transition_logging": null,
+  "enforcement_point": null,
+  "owner": null
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "2czYyrTzILg",
+  "url": "https://ai.engineer/talks/2czYyrTzILg-from-chaos-to-choreography-multi-agent-orchestration-patterns-that-actually-work-sandipan-bhaumi",
+  "video_url": "https://www.youtube.com/watch?v=2czYyrTzILg",
+  "title": "From Chaos to Choreography: Multi-Agent Orchestration Patterns That Actually Work",
+  "speaker": "Sandipan Bhaumik",
+  "event": "AI Engineer Europe 2026",
+  "retrieved_on": "2026-09-16",
+  "page_sha256": "15a991105e925fa64a8837e0670fa55215d1575457e307ebb73569125b440a1e",
+  "upstream_transcript": {
+    "id": "kgv2:transcript:e214415703dcdfdd96665cd9",
+    "sourceChecksum": "5df0bf311d83c0f9788d692c76639720f5ce9221ca276db2784d92db519d4267",
+    "logicalObjectPath": "objects/sha256/5d/5df0bf311d83c0f9788d692c76639720f5ce9221ca276db2784d92db519d4267.json",
+    "url": "https://assets.ai.engineer/sites/aiecode2025/knowledge-corpus/objects/sha256/5d/5df0bf311d83c0f9788d692c76639720f5ce9221ca276db2784d92db519d4267.json",
+    "sha256": "5df0bf311d83c0f9788d692c76639720f5ce9221ca276db2784d92db519d4267",
+    "bytes": 47453,
+    "segmentCount": 115
+  },
+  "transcript_review_status": "needs_review",
+  "rights": {
+    "upstreamStatus": "unverified",
+    "license": "NOASSERTION",
+    "publicDistribution": true,
+    "authorizationBasis": "owner-asserted-user-approved"
+  },
+  "note": "Upstream authorization metadata is descriptive; it does not grant this repository a transcript redistribution license. The talk page also carries an editorial article whose corrections and resource recommendations are not speaker statements."
+}

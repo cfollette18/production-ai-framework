@@ -19,5 +19,82 @@
     "to": "pillar-5",
     "origin": "assistant_implementation",
     "rationale": "Workflow actions must respect authorization and ownership."
+  },
+  {
+    "from": "pattern-coordination",
+    "relation": "uses",
+    "to": "pillar-2",
+    "origin": "assistant_implementation",
+    "rationale": "Event-driven coordination stays debuggable only with end-to-end event tracing."
+  },
+  {
+    "from": "pattern-state-versioning",
+    "relation": "depends_on",
+    "to": "pillar-3",
+    "origin": "assistant_implementation",
+    "rationale": "Versioned snapshots need an append-only storage policy and lifecycle management."
+  },
+  {
+    "from": "pattern-handoff-contracts",
+    "relation": "uses",
+    "to": "pattern-state-versioning",
+    "origin": "assistant_implementation",
+    "rationale": "Contracts are validated at each versioned handoff boundary."
+  },
+  {
+    "from": "pattern-circuit-breaker",
+    "relation": "uses",
+    "to": "pillar-2",
+    "origin": "assistant_implementation",
+    "rationale": "Breaker state transitions must be recorded as operational events."
+  },
+  {
+    "from": "pattern-saga-compensation",
+    "relation": "constrained_by",
+    "to": "pillar-5",
+    "origin": "assistant_implementation",
+    "rationale": "Compensating actions and irreversible steps require authorized owners."
+  },
+  {
+    "from": "pattern-reference-architecture",
+    "relation": "depends_on",
+    "to": "pattern-coordination",
+    "origin": "assistant_implementation",
+    "rationale": "The reference architecture centralizes coordination in an orchestrator."
+  },
+  {
+    "from": "retrieval-bm25",
+    "relation": "depends_on",
+    "to": "pillar-3",
+    "origin": "assistant_implementation",
+    "rationale": "Lexical retrieval configuration is versioned data-foundations state."
+  },
+  {
+    "from": "retrieval-bm25-parameters",
+    "relation": "constrained_by",
+    "to": "pillar-1",
+    "origin": "assistant_implementation",
+    "rationale": "k1 and b choices must be tuned and requalified through evaluation evidence."
+  },
+  {
+    "from": "retrieval-agentic-evaluation",
+    "relation": "uses",
+    "to": "pillar-1",
+    "origin": "assistant_implementation",
+    "rationale": "Retrieval quality is assessed through end-to-end task evaluation."
+  },
+  {
+    "from": "retrieval-agentic-search",
+    "relation": "uses",
+    "to": "pillar-2",
+    "origin": "assistant_implementation",
+    "rationale": "Query trajectories must be traced to separate retrieval failures from reasoning failures."
+  },
+  {
+    "from": "retrieval-workspace",
+    "relation": "constrained_by",
+    "to": "pillar-5",
+    "origin": "assistant_implementation",
+    "rationale": "Workspace contents are retrieved data; permission filtering and authorization still apply."
   }
 ]

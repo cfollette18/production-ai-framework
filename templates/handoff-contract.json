@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "contract_id": null,
+  "contract_version": null,
+  "producer_agent": null,
+  "consumer_agent": null,
+  "output_schema_reference": null,
+  "required_fields": [],
+  "acceptance_rules": [
+    {
+      "field": null,
+      "rule": null,
+      "threshold_rationale": null,
+      "threshold_decided_by": null
+    }
+  ],
+  "rejection_handling": null,
+  "schema_registry_reference": null,
+  "owner": null,
+  "last_reviewed": null
+}

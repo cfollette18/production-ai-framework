@@ -38,5 +38,109 @@
     "origin": "assistant_implementation",
     "document": "docs/operating-framework.md",
     "source_id": "ObTPqBGsEbA"
+  },
+  {
+    "id": "pattern-coordination",
+    "title": "Choreography versus orchestration",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/multi-agent-orchestration.md",
+    "source_id": "2czYyrTzILg"
+  },
+  {
+    "id": "pattern-state-versioning",
+    "title": "Immutable state snapshots and versioned handoffs",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/multi-agent-orchestration.md",
+    "source_id": "2czYyrTzILg"
+  },
+  {
+    "id": "pattern-handoff-contracts",
+    "title": "Data contracts at handoff boundaries",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/multi-agent-orchestration.md",
+    "source_id": "2czYyrTzILg"
+  },
+  {
+    "id": "pattern-circuit-breaker",
+    "title": "Circuit breakers around agent calls",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/multi-agent-orchestration.md",
+    "source_id": "2czYyrTzILg"
+  },
+  {
+    "id": "pattern-saga-compensation",
+    "title": "Saga compensation for partial failure",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/multi-agent-orchestration.md",
+    "source_id": "2czYyrTzILg"
+  },
+  {
+    "id": "pattern-reference-architecture",
+    "title": "Multi-agent reference architecture",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/multi-agent-orchestration.md",
+    "source_id": "2czYyrTzILg"
+  },
+  {
+    "id": "source-notes-2",
+    "title": "Orchestration talk source notes",
+    "kind": "source_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/source-notes-choreography.md",
+    "source_id": "2czYyrTzILg"
+  },
+  {
+    "id": "retrieval-agentic-search",
+    "title": "Agentic search: retrieval inside the agent loop",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/lexical-retrieval-bm25.md",
+    "source_id": "fZH97QHHYjY"
+  },
+  {
+    "id": "retrieval-bm25",
+    "title": "BM25 lexical scoring",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/lexical-retrieval-bm25.md",
+    "source_id": "fZH97QHHYjY"
+  },
+  {
+    "id": "retrieval-bm25-parameters",
+    "title": "BM25 k1 and b parameters",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/lexical-retrieval-bm25.md",
+    "source_id": "fZH97QHHYjY"
+  },
+  {
+    "id": "retrieval-agentic-evaluation",
+    "title": "Evaluating retrieval as end-to-end task success",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/lexical-retrieval-bm25.md",
+    "source_id": "fZH97QHHYjY"
+  },
+  {
+    "id": "retrieval-workspace",
+    "title": "Retrieval results as a filesystem workspace",
+    "kind": "implementation_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/lexical-retrieval-bm25.md",
+    "source_id": "fZH97QHHYjY"
+  },
+  {
+    "id": "source-notes-3",
+    "title": "BM25 talk source notes",
+    "kind": "source_navigation",
+    "origin": "assistant_implementation",
+    "document": "docs/source-notes-bm25.md",
+    "source_id": "fZH97QHHYjY"
   }
 ]

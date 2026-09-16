@@ -51,6 +51,8 @@ Import records into your existing retrieval backend if useful. Preserve IDs, pat
 
 Require citations, explicit assumptions, and knowledge-gap reporting. A host can reject unknown IDs, but known IDs do not prove semantic support. Test whether recommendations follow from their citations and whether the agent abstains on absent vendor details. A repository is not an enforcement sandbox.
 
+For consistent agent outputs, preserve the canonical pillar order: Evaluation, Observability, Data foundations, Orchestration, Governance. The order is a stable taxonomy, not a required implementation sequence.
+
 Test planning, design review, release readiness, incidents, and unsupported API/pricing questions. Confirm that drafts remain drafts, unresolved thresholds stay unresolved, and no unperformed action is reported as complete.
 
 ## Reproducibility and adapters

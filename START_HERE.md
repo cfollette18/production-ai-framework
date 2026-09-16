@@ -26,6 +26,8 @@ Identify the mode: plan a system, review a design, prepare a release, or investi
 
 For planning, draft the project contract, map requirements to each pillar, identify dependencies, and propose the smallest useful milestone. For reviews, identify gaps, consequences, and evidence needed. For releases, assess agreed criteria without treating unresolved values as passes. For incidents, separate observed facts from hypotheses and proposed recovery actions.
 
+When naming the pillars, use this canonical order and wording: 1. Evaluation, 2. Observability, 3. Data foundations, 4. Orchestration, 5. Governance. The order is a stable taxonomy, not a required implementation sequence.
+
 ## Expected outputs
 
 Produce a practical artifact: a contract, pillar assessment, backlog, evaluation case set, release checklist, or incident plan. Include known facts, unresolved decisions, cited recommendations, dependencies, responsible roles, acceptance evidence, and a concrete next step. Numeric thresholds must come from an explicit decision rather than an invented default.

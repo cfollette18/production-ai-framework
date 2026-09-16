@@ -2,7 +2,7 @@
 
 An agent-independent framework for planning, reviewing, and operating enterprise AI systems. Any agent that can read text or JSON can use it. No Hermes installation, model provider, vector database, or agent SDK is required.
 
-The framework turns a proposed AI workflow into explicit requirements, evaluation evidence, operational controls, and accountable release decisions. Its procedures are implementation recommendations inspired by two Sandipan Bhaumik talks at AI Engineer Europe 2026 — a production playbook and a multi-agent orchestration patterns talk — not a verbatim transcript or vendor deployment manual. See the [source notes](docs/source-notes.md) for the playbook talk and the [orchestration talk notes](docs/source-notes-choreography.md).
+The framework turns a proposed AI workflow into explicit requirements, evaluation evidence, operational controls, and accountable release decisions. Its procedures are implementation recommendations inspired by Sandipan Bhaumik's talk, not a verbatim transcript or vendor deployment manual. See [source notes](docs/source-notes.md).
 
 ## The five pillars
 

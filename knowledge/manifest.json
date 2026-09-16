@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "framework_id": "production-ai-framework",
+  "entrypoint_id": "agent-entrypoint",
+  "records": [
+    {
+      "id": "agent-entrypoint",
+      "path": "START_HERE.md",
+      "heading": null,
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "source-notes",
+      "path": "docs/source-notes.md",
+      "heading": null,
+      "origin": "source_synopsis"
+    },
+    {
+      "id": "pillars",
+      "path": "docs/pillars.md",
+      "heading": null,
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "project-contract",
+      "path": "docs/operating-framework.md",
+      "heading": "## 1. Project contract",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "evaluation",
+      "path": "docs/operating-framework.md",
+      "heading": "## 2. Evaluation system",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "observability",
+      "path": "docs/operating-framework.md",
+      "heading": "## 3. Observability and runtime controls",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "data-foundations",
+      "path": "docs/operating-framework.md",
+      "heading": "## 4. Data lifecycle",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "orchestration",
+      "path": "docs/operating-framework.md",
+      "heading": "## 5. Workflow coordination",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "governance",
+      "path": "docs/operating-framework.md",
+      "heading": "## 6. Governance and changes",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "incident-response",
+      "path": "docs/operating-framework.md",
+      "heading": "## 7. Incident response",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "adoption",
+      "path": "docs/operating-framework.md",
+      "heading": "## 8. Adoption sequence",
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "retrieval",
+      "path": "docs/retrieval-and-reproducibility.md",
+      "heading": null,
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "agent-integration",
+      "path": "docs/agent-integration.md",
+      "heading": null,
+      "origin": "implementation_guidance"
+    },
+    {
+      "id": "template-project",
+      "path": "templates/project.json",
+      "heading": null,
+      "origin": "implementation_template"
+    },
+    {
+      "id": "template-evaluation-case",
+      "path": "templates/evaluation-case.json",
+      "heading": null,
+      "origin": "implementation_template"
+    },
+    {
+      "id": "template-trace",
+      "path": "templates/trace.json",
+      "heading": null,
+      "origin": "implementation_template"
+    },
+    {
+      "id": "template-change",
+      "path": "templates/change.json",
+      "heading": null,
+      "origin": "implementation_template"
+    },
+    {
+      "id": "template-incident",
+      "path": "templates/incident.json",
+      "heading": null,
+      "origin": "implementation_template"
+    },
+    {
+      "id": "source-manifest",
+      "path": "sources/manifest.json",
+      "heading": null,
+      "origin": "source_metadata"
+    },
+    {
+      "id": "source-coverage",
+      "path": "sources/coverage.json",
+      "heading": null,
+      "origin": "source_metadata"
+    },
+    {
+      "id": "catalog-records",
+      "path": "knowledge/records.json",
+      "heading": null,
+      "origin": "navigation_metadata"
+    },
+    {
+      "id": "catalog-relationships",
+      "path": "knowledge/relationships.json",
+      "heading": null,
+      "origin": "navigation_metadata"
+    }
+  ]
+}

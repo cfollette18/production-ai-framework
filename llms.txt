@@ -1,0 +1,10 @@
+# Production AI Framework
+
+Agent-independent enterprise AI planning and operations knowledge.
+
+- [Start here](START_HERE.md): instructions and expected outputs for any agent.
+- [Complete text context](dist/agent-context.md): attach or load directly.
+- [Structured bundle](dist/knowledge.json): stable IDs, text, origin, and hashes.
+- [Five pillars](docs/pillars.md): evaluation, observability, data foundations, orchestration, governance.
+- [Agent integration](docs/agent-integration.md): generic context and retrieval interfaces.
+- [Source notes](docs/source-notes.md): attribution and limitations.

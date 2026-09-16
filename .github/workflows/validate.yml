@@ -9,5 +9,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python scripts/knowledge.py validate
+      - run: python scripts/knowledge.py check-export
+      - run: python -m unittest discover -s tests
       - run: python scripts/knowledge.py build
       - run: python scripts/knowledge.py search evaluation

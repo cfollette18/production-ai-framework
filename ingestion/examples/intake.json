@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "source": {
+    "id": "example-retry-workshop", "revision": "1",
+    "title": "Fictional retry-policy workshop excerpt",
+    "url": null, "creators": [], "publication_date": null,
+    "source_type": "synthetic_example", "supplied_material": ["transcript"],
+    "source_sha256": null,
+    "rights": {"raw_redistribution": "unknown", "basis": "Original example in this repository; the repository has no selected reuse license."}
+  },
+  "extraction": {
+    "state": "complete_for_supplied_input", "model": null, "run_date": null,
+    "review": {"status": "needs_review", "reviewer": null, "date": null, "notes": "Synthetic demonstration; not independently verified production advice."}
+  },
+  "segments": [
+    {"id": "example-retry-workshop-s001", "locator": {"kind": "paragraph", "start": "P001", "end": null}, "state": "reviewed", "disposition": "extracted", "claim_ids": ["example-retry-workshop-c001"], "note": "Trial-specific retry recommendation; preserve exclusion."},
+    {"id": "example-retry-workshop-s002", "locator": {"kind": "paragraph", "start": "P002", "end": null}, "state": "reviewed", "disposition": "extracted", "claim_ids": ["example-retry-workshop-c002"], "note": "Trace field recommendation with diagnostic purpose."},
+    {"id": "example-retry-workshop-s003", "locator": {"kind": "paragraph", "start": "P003", "end": null}, "state": "reviewed", "disposition": "extracted", "claim_ids": ["example-retry-workshop-c003"], "note": "Different proposed cap; no comparative evidence."},
+    {"id": "example-retry-workshop-s004", "locator": {"kind": "paragraph", "start": "P004", "end": null}, "state": "reviewed", "disposition": "extracted", "claim_ids": ["example-retry-workshop-c004"], "note": "Release criteria with explicitly unspecified thresholds."},
+    {"id": "example-retry-workshop-s005", "locator": {"kind": "paragraph", "start": "P005", "end": null}, "state": "reviewed", "disposition": "no_relevant_content", "claim_ids": [], "note": "Closing logistics without enterprise AI guidance."},
+    {"id": "example-retry-workshop-s006", "locator": {"kind": "paragraph", "start": "P006", "end": null}, "state": "reviewed", "disposition": "no_relevant_content", "claim_ids": [], "note": "Quoted hostile message, not followed. No defensive procedure is actually supplied to extract."}
+  ],
+  "claims": [
+    {"id": "example-retry-workshop-c001", "statement": "One facilitator proposes at most two retry attempts after a failed request for a small trial, excluding long-running migrations.", "kind": "recommendation", "origin": "source_assertion", "verification": "not_independently_verified", "evidence_segment_ids": ["example-retry-workshop-s001"], "primary_pillar": "orchestration", "secondary_pillars": [], "scope": "The fictional small trial only; retry attempts follow the initial failed request.", "caveats": ["Not an organization-wide default.", "A second facilitator proposes a different cap."]},
+    {"id": "example-retry-workshop-c002", "statement": "The engineer recommends storing the retrieved document version in the request trace to support policy-version diagnosis.", "kind": "recommendation", "origin": "source_assertion", "verification": "not_independently_verified", "evidence_segment_ids": ["example-retry-workshop-s002"], "primary_pillar": "observability", "secondary_pillars": ["data-foundations"], "scope": "Requests retrieving a versioned policy document.", "caveats": ["No tracing vendor, schema, or storage mechanism is specified."]},
+    {"id": "example-retry-workshop-c003", "statement": "A second facilitator proposes a maximum of four retry attempts for the same trial without comparative results supporting that number.", "kind": "recommendation", "origin": "source_assertion", "verification": "not_independently_verified", "evidence_segment_ids": ["example-retry-workshop-s003"], "primary_pillar": "orchestration", "secondary_pillars": [], "scope": "Same fictional trial as the two-retry proposal.", "caveats": ["Conflicts with the other proposed cap.", "No evidence selects either number as correct."]},
+    {"id": "example-retry-workshop-c004", "statement": "The reviewer calls for documented evaluation criteria before release approval, leaving dataset size and accuracy targets undecided.", "kind": "recommendation", "origin": "source_assertion", "verification": "not_independently_verified", "evidence_segment_ids": ["example-retry-workshop-s004"], "primary_pillar": "evaluation", "secondary_pillars": ["governance"], "scope": "Release review discussed in the fictional workshop.", "caveats": ["No default sample size or passing score is supplied."]}
+  ],
+  "relationships": [
+    {"from": "example-retry-workshop-c001", "to": "example-retry-workshop-c003", "type": "contradicts", "origin": "model_proposal", "supporting_claim_ids": ["example-retry-workshop-c001", "example-retry-workshop-c003"], "rationale": "Different proposed maximum retry policies for the same trial; preserve the disagreement rather than selecting one."}
+  ],
+  "procedures": [
+    {
+      "id": "example-retry-workshop-p001", "title": "Capture retrieval version evidence",
+      "trigger": "A request retrieves a policy document.",
+      "prerequisites": ["A document version identifier is available; availability must be confirmed during implementation."],
+      "steps": [
+        {"instruction": "Record the retrieved document version in the request trace.", "origin": "source_guidance", "supporting_claim_ids": ["example-retry-workshop-c002"]},
+        {"instruction": "As an implementation proposal, inspect a test trace and compare its version identifier with the retrieved document.", "origin": "implementation_proposal", "supporting_claim_ids": ["example-retry-workshop-c002"]}
+      ],
+      "verification": "Proposed implementation check: the test trace identifies the same version as the retrieved document. This check has not been executed.",
+      "failure_considerations": ["Proposed open question: define handling for a missing version identifier; the source gives no fallback."]
+    }
+  ],
+  "conflicts": [
+    {"id": "example-retry-workshop-conflict001", "claim_ids": ["example-retry-workshop-c001", "example-retry-workshop-c003"], "existing_record_ids": [], "description": "Two versus four retry attempts are alternative proposed caps for the same trial; no resolution is supplied.", "status": "unresolved"}
+  ],
+  "coverage": {
+    "input_scope": "All six labeled paragraphs of the supplied fictional excerpt; introductory labels establish provenance, not additional technical claims.",
+    "supplied_segment_count": 6, "reviewed_segment_count": 6,
+    "missing_modalities": ["No audio, video, or slides supplied."],
+    "unprocessed_segment_ids": [],
+    "notes": "Four extracted claims; two excluded segments with reasons. No timestamps invented. Source checksum not computed in this illustrative output. Source assertions remain unverified."
+  },
+  "integration": {
+    "comparison_status": "not_provided", "existing_revision": null, "existing_record_ids": [],
+    "proposed_changes": ["Keep this packet as a synthetic example only; do not register it as production knowledge.", "If processing a real source with this shape, stage a source-scoped packet and guide before reviewed registration."]
+  },
+  "resume": {"next_segment_ids": [], "missing_input": [], "notes": "No remaining supplied text. Human review, conflict resolution, and comparison with existing knowledge remain separate tasks."}
+}

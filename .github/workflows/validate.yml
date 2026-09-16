@@ -8,6 +8,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - run: python -m pip install -r ingestion/requirements.txt
+      - run: python scripts/build_ingestion_kit.py --check
+      - run: python scripts/validate_intake.py --all
       - run: python scripts/knowledge.py validate
       - run: python scripts/knowledge.py check-export
       - run: python -m unittest discover -s tests

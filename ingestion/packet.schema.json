@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Production AI Framework source intake v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source", "extraction", "segments", "claims", "relationships", "procedures", "conflicts", "coverage", "integration", "resume"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source": {"$ref": "#/$defs/source"},
+    "extraction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["state", "model", "run_date", "review"],
+      "properties": {
+        "state": {"enum": ["partial", "complete_for_supplied_input"]},
+        "model": {"type": ["string", "null"]},
+        "run_date": {"type": ["string", "null"], "format": "date"},
+        "review": {
+          "type": "object", "additionalProperties": false,
+          "required": ["status", "reviewer", "date", "notes"],
+          "properties": {
+            "status": {"enum": ["needs_review", "reviewed"]},
+            "reviewer": {"type": ["string", "null"]},
+            "date": {"type": ["string", "null"], "format": "date"},
+            "notes": {"type": "string"}
+          }
+        }
+      }
+    },
+    "segments": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/segment"}},
+    "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}},
+    "relationships": {"type": "array", "items": {"$ref": "#/$defs/relationship"}},
+    "procedures": {"type": "array", "items": {"$ref": "#/$defs/procedure"}},
+    "conflicts": {"type": "array", "items": {"$ref": "#/$defs/conflict"}},
+    "coverage": {
+      "type": "object", "additionalProperties": false,
+      "required": ["input_scope", "supplied_segment_count", "reviewed_segment_count", "missing_modalities", "unprocessed_segment_ids", "notes"],
+      "properties": {
+        "input_scope": {"type": "string", "minLength": 1},
+        "supplied_segment_count": {"type": "integer", "minimum": 1},
+        "reviewed_segment_count": {"type": "integer", "minimum": 0},
+        "missing_modalities": {"$ref": "#/$defs/strings"},
+        "unprocessed_segment_ids": {"$ref": "#/$defs/ids"},
+        "notes": {"type": "string"}
+      }
+    },
+    "integration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["comparison_status", "existing_revision", "existing_record_ids", "proposed_changes"],
+      "properties": {
+        "comparison_status": {"enum": ["not_provided", "compared"]},
+        "existing_revision": {"type": ["string", "null"]},
+        "existing_record_ids": {"$ref": "#/$defs/ids"},
+        "proposed_changes": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "resume": {
+      "type": "object", "additionalProperties": false,
+      "required": ["next_segment_ids", "missing_input", "notes"],
+      "properties": {
+        "next_segment_ids": {"$ref": "#/$defs/ids"},
+        "missing_input": {"$ref": "#/$defs/strings"},
+        "notes": {"type": "string"}
+      }
+    }
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "ids": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/id"}},
+    "strings": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "pillar": {"enum": ["evaluation", "observability", "data-foundations", "orchestration", "governance", "unmapped"]},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "revision", "title", "url", "creators", "publication_date", "source_type", "supplied_material", "source_sha256", "rights"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "revision": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "url": {"type": ["string", "null"], "format": "uri"},
+        "creators": {"$ref": "#/$defs/strings"},
+        "publication_date": {"type": ["string", "null"], "format": "date"},
+        "source_type": {"enum": ["video", "audio", "article", "document", "notes", "synthetic_example"]},
+        "supplied_material": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"enum": ["transcript", "slides", "audio", "video", "article", "notes"]}},
+        "source_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+        "rights": {
+          "type": "object", "additionalProperties": false,
+          "required": ["raw_redistribution", "basis"],
+          "properties": {
+            "raw_redistribution": {"enum": ["unknown", "allowed", "not_allowed"]},
+            "basis": {"type": ["string", "null"]}
+          }
+        }
+      }
+    },
+    "segment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "locator", "state", "disposition", "claim_ids", "note"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "locator": {
+          "type": "object", "additionalProperties": false,
+          "required": ["kind", "start", "end"],
+          "properties": {
+            "kind": {"enum": ["timestamp", "paragraph", "page", "source_segment"]},
+            "start": {"type": "string", "minLength": 1},
+            "end": {"type": ["string", "null"]}
+          }
+        },
+        "state": {"enum": ["reviewed", "unread", "unavailable"]},
+        "disposition": {"enum": ["extracted", "no_relevant_content", "unresolved", "unprocessed"]},
+        "claim_ids": {"$ref": "#/$defs/ids"},
+        "note": {"type": "string", "minLength": 1}
+      }
+    },
+    "claim": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "statement", "kind", "origin", "verification", "evidence_segment_ids", "primary_pillar", "secondary_pillars", "scope", "caveats"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "statement": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["definition", "recommendation", "observation", "case_study", "quantitative_claim", "warning"]},
+        "origin": {"const": "source_assertion"},
+        "verification": {"const": "not_independently_verified"},
+        "evidence_segment_ids": {"$ref": "#/$defs/ids", "minItems": 1},
+        "primary_pillar": {"$ref": "#/$defs/pillar"},
+        "secondary_pillars": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/pillar"}},
+        "scope": {"type": "string", "minLength": 1},
+        "caveats": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "relationship": {
+      "type": "object", "additionalProperties": false,
+      "required": ["from", "to", "type", "origin", "supporting_claim_ids", "rationale"],
+      "properties": {
+        "from": {"$ref": "#/$defs/id"},
+        "to": {"$ref": "#/$defs/id"},
+        "type": {"enum": ["supports", "requires", "contradicts", "duplicates"]},
+        "origin": {"enum": ["source_stated", "model_proposal"]},
+        "supporting_claim_ids": {"$ref": "#/$defs/ids", "minItems": 1},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "procedure": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "trigger", "prerequisites", "steps", "verification", "failure_considerations"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "title": {"type": "string", "minLength": 1},
+        "trigger": {"type": "string", "minLength": 1},
+        "prerequisites": {"$ref": "#/$defs/strings"},
+        "steps": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["instruction", "origin", "supporting_claim_ids"],
+            "properties": {
+              "instruction": {"type": "string", "minLength": 1},
+              "origin": {"enum": ["source_guidance", "implementation_proposal"]},
+              "supporting_claim_ids": {"$ref": "#/$defs/ids", "minItems": 1}
+            }
+          }
+        },
+        "verification": {"type": "string", "minLength": 1},
+        "failure_considerations": {"$ref": "#/$defs/strings"}
+      }
+    },
+    "conflict": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "claim_ids", "existing_record_ids", "description", "status"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "claim_ids": {"$ref": "#/$defs/ids", "minItems": 1},
+        "existing_record_ids": {"$ref": "#/$defs/ids"},
+        "description": {"type": "string", "minLength": 1},
+        "status": {"const": "unresolved"}
+      }
+    }
+  }
+}

@@ -8,3 +8,5 @@ Agent-independent enterprise AI planning and operations knowledge.
 - [Five pillars](docs/pillars.md): evaluation, observability, data foundations, orchestration, governance.
 - [Agent integration](docs/agent-integration.md): generic context and retrieval interfaces.
 - [Source notes](docs/source-notes.md): attribution and limitations.
+- [Source ingestion instructions](ingestion/README.md): add a new transcript or document with any model.
+- [Single-file ingestion kit](dist/source-ingestion-kit.md): upload alongside a source; includes rules, schema, and example.

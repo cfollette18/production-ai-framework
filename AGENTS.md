@@ -15,3 +15,5 @@ For consuming this framework, read START_HERE.md first. For repository changes, 
 - Changes to this framework do not authorize deployment, external messages, or production tool actions.
 
 - Run `python3 scripts/knowledge.py export` after modifying any declared knowledge input, then `python3 scripts/knowledge.py check-export`. Keep exports deterministic.
+- For new-source ingestion, use ingestion/README.md, WORKFLOW.md, and ROUTING.md. Keep candidate additions source-scoped and do not overwrite the original talk's metadata. Validate intake packets before integration.
+- After changing the ingestion kit's source files, run `python3 scripts/build_ingestion_kit.py` and its `--check` mode. The authoring kit is separate from runtime advisor context.

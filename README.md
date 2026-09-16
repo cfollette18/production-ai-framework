@@ -2,7 +2,7 @@
 
 An agent-independent framework for planning, reviewing, and operating enterprise AI systems. Any agent that can read text or JSON can use it. No Hermes installation, model provider, vector database, or agent SDK is required.
 
-The framework turns a proposed AI workflow into explicit requirements, evaluation evidence, operational controls, and accountable release decisions. Its procedures are implementation recommendations inspired by Sandipan Bhaumik's talk, not a verbatim transcript or vendor deployment manual. See [source notes](docs/source-notes.md).
+The framework turns a proposed AI workflow into explicit requirements, evaluation evidence, operational controls, and accountable release decisions. Its procedures are implementation recommendations inspired by two Sandipan Bhaumik talks at AI Engineer Europe 2026 — a production playbook and a multi-agent orchestration patterns talk — not a verbatim transcript or vendor deployment manual. See the [source notes](docs/source-notes.md) for the playbook talk and the [orchestration talk notes](docs/source-notes-choreography.md).
 
 ## The five pillars
 
@@ -43,6 +43,14 @@ URL-based agents can fetch the [raw text pack](https://raw.githubusercontent.com
 
 The agent produces plans and draft artifacts. Actual execution requires its host's separately configured tools and authorization. Reading this repository does not authorize deployment.
 
+## Add another transcript or source with any model
+
+Upload [dist/source-ingestion-kit.md](dist/source-ingestion-kit.md) and your new transcript/document to the model. The kit tells it how to inventory the input, extract evidenced claims, preserve numerical context, map material to the five pillars, handle conflicts, and return files ready for review and integration.
+
+Optionally upload the current [dist/knowledge.json](dist/knowledge.json) so the model can compare against existing records. With no snapshot, it must mark comparison as pending. The kit supplies a complete synthetic example, a JSON Schema, continuation rules for long inputs, and exact file destinations.
+
+See [ingestion/README.md](ingestion/README.md) for the copy/paste prompt and validation commands. This is a standalone authoring kit; no Hermes profile or database is required. [Raw upload file](https://raw.githubusercontent.com/cfollette18/production-ai-framework/main/dist/source-ingestion-kit.md).
+
 ## Rebuild and query
 
 Reading the files requires no runtime. Optional tools require Python 3.10+; SQLite search additionally requires FTS5.
@@ -57,6 +65,9 @@ python3 scripts/knowledge.py related pillar-1
 python3 scripts/knowledge.py bundle
 python3 scripts/knowledge.py build
 python3 scripts/knowledge.py search evaluation
+python3 -m pip install -r ingestion/requirements.txt  # optional ingestion validation and full contributor tests
+python3 scripts/validate_intake.py --all
+python3 scripts/build_ingestion_kit.py --check
 python3 -m unittest discover -s tests
 ```
 
